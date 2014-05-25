@@ -1,0 +1,35 @@
+{
+  "name": "konzole",
+  "version": "0.0.1",
+  "description": "Console applications for the masses",
+  "main": "konzole.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:odino/konzole"
+  },
+  "keywords": [
+    "console",
+    "cli",
+    "tool",
+    "commander",
+    "command",
+    "line"
+  ],
+  "author": "odino",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/odino/konzole/issues"
+  },
+  "homepage": "https://github.com/odino/konzole",
+  "dependencies": {
+    "colors": "^0.6.2",
+    "yargs": "^1.2.2",
+    "lodash": "^2.4.1"
+  }
+}
