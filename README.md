@@ -42,6 +42,8 @@ et-voila:
 
 ![ls command](https://raw.githubusercontent.com/odino/konzole/master/bin/ls.png?token=328420__eyJzY29wZSI6IlJhd0Jsb2I6b2Rpbm8va29uem9sZS9tYXN0ZXIvYmluL2xzLnBuZyIsImV4cGlyZXMiOjE0MDE2ODgzNjZ9--1b7959250c37da96514d12e801f14a95b313c4ff)
 
+## Options
+
 To add options to your command, simply declare them as dependencies
 of your command:
 
