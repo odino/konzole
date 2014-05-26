@@ -3,9 +3,9 @@
  */
 var colors      = require('colors');
 var argv        = require('yargs').argv;
-var multiline   = require('multiline');
 var help        = require('./command/help');
 var Kommand     = require('./kommand');
+var Input       = require('./input');
 
 /**
  * Constructor of the konzole object.
@@ -37,7 +37,7 @@ Konzole.prototype.run = function(){
         return;
     }
 
-    command.run(this);
+    command.run(this, new Input(command));
 
     console.log("\nGame over".rainbow)
 };

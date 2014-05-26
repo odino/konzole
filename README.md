@@ -50,8 +50,8 @@ var kommand = require('./option');
 
 var ls = new kommand('ls', [new Option('d', 'dir', '.')]);
 
-ls.run = function(konzole, options) {
-    console.log(fs.readdirSync('.'))
+ls.run = function(konzole, input) {
+    console.log(fs.readdirSync(input.getOption('d')))
 };
 ```
 

@@ -1,3 +1,5 @@
+var _ = require('lodash');
+
 /**
  * The Kommand class is a base class for
  * commands that can run through a console.
@@ -12,7 +14,7 @@ function Kommand(name, options){
     }
 
     this.name    = name;
-    this.options = options || {};
+    this.options = options || [];
 };
 
 /**
