@@ -59,8 +59,8 @@ ls.run = function(konzole, input) {
 
 the three arguments of an option are:
 
-* it's name (`-d`)
-* it's alias (`--dir`)
-* it's default value (`.`)
+* its name (`-d`)
+* its alias (`--dir`)
+* its default value (`.`)
 
 Now you can simply use your pimped command with `node index.js ls --dir=/home/you/something`.
