@@ -65,6 +65,13 @@ Now you can simply use your pimped command with `node index.js ls --dir=/home/yo
 
 ## Example console
 
+In this example we are adding to the console
+the already-seen `ls` command and a new, `quote`,
+command that will retrieve a random quote from the
+internet.
+
+Just like that.
+
 ``` javascript
 var konzole = require('./konzole')('MY FIRST CONSOLE', "1.0.0");
 var kommand = require('./kommand');
