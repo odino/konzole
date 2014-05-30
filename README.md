@@ -106,3 +106,9 @@ konzole.run();
 ![Konzole](https://raw.githubusercontent.com/odino/konzole/master/bin/quote.png?token=328420__eyJzY29wZSI6IlJhd0Jsb2I6b2Rpbm8va29uem9sZS9tYXN0ZXIvYmluL3F1b3RlLnBuZyIsImV4cGlyZXMiOjE0MDIwNzU0MTR9--c173a76cafbe5536a915aad1b63ad397b8e75140)
 
 Have fun!
+
+## Tests
+
+![tests](https://camo.githubusercontent.com/f87943961a595be24c82e4505219bd945c110c72/687474703a2f2f67616c657269322e756c75646167736f7a6c756b2e636f6d2f3334322f62697463682d706c656173655f3435393239322e6a7067)
+
+Gimme some time :)
