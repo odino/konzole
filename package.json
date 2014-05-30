@@ -1,6 +1,6 @@
 {
   "name": "konzole",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Console applications for the masses",
   "main": "konzole.js",
   "directories": {
