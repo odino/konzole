@@ -103,6 +103,6 @@ konzole.addCommand('quote', quote);
 konzole.run();
 ```
 
-![Konzole](https://raw.githubusercontent.com/odino/konzole/master/bin/quote.png?token=328420__eyJzY29wZSI6IlJhd0Jsb2I6b2Rpbm8va29uem9sZS9tYXN0ZXIvYmluL2NvbnNvbGUucG5nIiwiZXhwaXJlcyI6MTQwMTY0NzQ1MX0%3D--e83af2a7b2deeed6b9c9bbf5eb9bdc3482d050e0)
+![Konzole](https://raw.githubusercontent.com/odino/konzole/master/bin/quote.png?token=328420__eyJzY29wZSI6IlJhd0Jsb2I6b2Rpbm8va29uem9sZS9tYXN0ZXIvYmluL3F1b3RlLnBuZyIsImV4cGlyZXMiOjE0MDIwNzU0MTR9--c173a76cafbe5536a915aad1b63ad397b8e75140)
 
 Have fun!
