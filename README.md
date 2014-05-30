@@ -21,8 +21,8 @@ Let's declare a new `ls` command that will simply `console.log` the
 contents of a directory:
 
 ``` javascript
-var konzole = require('./konzole')('MY FIRST CONSOLE', "1.0.0");
-var kommand = require('./kommand');
+var konzole = require('konzole')('MY FIRST CONSOLE', "1.0.0");
+var kommand = require('kommand');
 var fs = require('fs');
 
 var ls = new kommand('Lists contents of a directory');
@@ -46,7 +46,8 @@ To add options to your command, simply declare them as dependencies
 of your command:
 
 ``` javascript
-var kommand = require('./option');
+var kommand = require('kommand');
+var kommand = require('option');
 
 var ls = new kommand('Lists contents of a directory', [new option('d', 'dir', '.')]);
 
@@ -73,9 +74,9 @@ internet.
 Just like that.
 
 ``` javascript
-var konzole = require('./konzole')('MY FIRST CONSOLE', "1.0.0");
-var kommand = require('./kommand');
-var option  = require('./option');
+var konzole = require('konzole')('MY FIRST CONSOLE', "1.0.0");
+var kommand = require('kommand');
+var option  = require('option');
 var fs = require('fs');
 var colors = require('colors');
 var _ = require('lodash');
