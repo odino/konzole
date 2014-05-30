@@ -16,8 +16,7 @@ var writeLn = function(string) {
  *
  * @type {Kommand}
  */
-var helpCommand = new Kommand('help');
-helpCommand.description = "prints useful stuff"
+var helpCommand = new Kommand('prints informations about the current konzole');
 
 /**
  * Running the help command will display all
@@ -31,15 +30,14 @@ helpCommand.run = function(konzole) {
     console.log("Available commands:");
     writeLn();
 
-    _.each(konzole.commands, function(command){
-        var name        = command.name.bold;
-        var description = command.description || 'no description provided';
+    _.each(konzole.commands, function(command, id){
+        var id          = id.bold;
+        var description = command.description;
 
-        console.log((" - {name} ({description})".replace('{name}', name).replace('{description}', description)));
+        console.log((" - {id} ({description})".replace('{id}', id).replace('{description}', description)));
     });
 
     writeLn();
-
     writeLn(("Run a command with {cmd}".replace('{cmd}', ("'" + (argv['$0']) + " command'").bold)));
 };
 

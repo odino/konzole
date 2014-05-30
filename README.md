@@ -2,8 +2,6 @@
 
 Console applications in NodeJS made easy as hell.
 
-With rainbows.
-
 ![Konzole](https://raw.githubusercontent.com/odino/konzole/master/bin/console.png?token=328420__eyJzY29wZSI6IlJhd0Jsb2I6b2Rpbm8va29uem9sZS9tYXN0ZXIvYmluL2NvbnNvbGUucG5nIiwiZXhwaXJlcyI6MTQwMTY0NzQ1MX0%3D--e83af2a7b2deeed6b9c9bbf5eb9bdc3482d050e0)
 
 ## Usage
@@ -27,7 +25,7 @@ var konzole = require('./konzole')('MY FIRST CONSOLE', "1.0.0");
 var kommand = require('./kommand');
 var fs = require('fs');
 
-var ls = new kommand('ls');
+var ls = new kommand('Lists contents of a directory');
 
 ls.run = function(konzole) {
     console.log(fs.readdirSync('.'))
@@ -50,7 +48,7 @@ of your command:
 ``` javascript
 var kommand = require('./option');
 
-var ls = new kommand('ls', [new Option('d', 'dir', '.')]);
+var ls = new kommand('Lists contents of a directory', [new option('d', 'dir', '.')]);
 
 ls.run = function(konzole, input) {
     console.log(fs.readdirSync(input.getOption('d')))
@@ -64,3 +62,38 @@ the three arguments of an option are:
 * its default value (`.`)
 
 Now you can simply use your pimped command with `node index.js ls --dir=/home/you/something`.
+
+## Example console
+
+``` javascript
+var konzole = require('./konzole')('MY FIRST CONSOLE', "1.0.0");
+var kommand = require('./kommand');
+var option  = require('./option');
+var fs = require('fs');
+var colors = require('colors');
+var _ = require('lodash');
+var HTTP = require("q-io/http");
+
+var ls = new kommand('Lists contents of a directory', [new option('d', 'dir', '.')]);
+ls.run = function(konzole, input) {
+    var directory = input.getOption('dir');
+
+    console.log(fs.readdirSync(directory));
+};
+
+var quote = new kommand('Retrieves a random quote');
+quote.run = function(konzole, input) {
+    HTTP.request({url: "http://www.iheartquotes.com/api/v1/random.json", method: 'GET'}).then(function(response){
+        response.body.read().then(function (buffer) {
+            console.log(JSON.parse(buffer.toString('UTF-8')).quote.inverse);
+        });
+    })
+};
+
+konzole.addCommand('ls', ls);
+konzole.addCommand('quote', quote);
+
+konzole.run();
+```
+
+Have fun!

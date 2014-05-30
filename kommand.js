@@ -8,13 +8,9 @@ var _ = require('lodash');
  * @param options
  * @constructor
  */
-function Kommand(name, options){
-    if (!name) {
-        throw new Error('commands must have a name')
-    }
-
-    this.name    = name;
-    this.options = options || [];
+function Kommand(description, options){
+    this.description    = description || 'No description provided';
+    this.options        = options || [];
 };
 
 /**
@@ -23,7 +19,7 @@ function Kommand(name, options){
  *
  * @param konzole
  */
-Kommand.prototype.run = function(konzole) {
+Kommand.prototype.run = function() {
     throw new Error("You must implement the #run() method in your commands");
 };
 

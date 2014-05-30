@@ -38,8 +38,6 @@ Konzole.prototype.run = function(){
     }
 
     command.run(this, new Input(command));
-
-    console.log("\nGame over".rainbow)
 };
 
 /**
